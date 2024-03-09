@@ -9,6 +9,10 @@ class TestGfx(unittest.TestCase):
         self.assertEqual(screen["width"], 640)
         self.assertEqual(screen["height"], 320)
 
+        center = Gfx().get_screen_center(screen)
+
+        print(center)
+
 
 if __name__ == "__main__":
     unittest.main()
