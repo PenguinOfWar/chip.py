@@ -38,6 +38,10 @@ class Gfx(object):
 
         self.tk.title("CHIP.py")
 
+        self.tk.lift()
+        self.tk.attributes("-topmost", True)
+        self.tk.after_idle(self.tk.attributes, "-topmost", False)
+
         return self.tk.mainloop()
 
     #  returns the screen dimensions in pixels
